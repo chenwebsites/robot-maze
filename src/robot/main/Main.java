@@ -1,43 +1,24 @@
 package robot.main;
 
-public class Main {
+import java.util.Iterator;
 
-	// I assume the robot begins his walk from the first square at (6,0)
-	// and after he enter the maze, the entrence becomes a well.
-	// I assume for each maze, there is an exit. 
-	// The robot "walks with his left hand touching" the left wall until he finds
-	// the exit.
+public class Main {
 
 	public static void main(String[] args) {
 		Robot robot = new Robot();
+		int[] sequence = { 1, 3, 2 };
 
 		while (!robot.hasExited()) {
 
-			robot.turnLeft();
-			if (robot.isPathClear()) {
-				robot.moveForward();
-				break;
-			} else {
-				for (int i = 0; i < 3; i++) {
+			for (int count : sequence) {
+				for (int i = 0; i < count; i++) {
 					robot.turnLeft();
 				}
 				if (robot.isPathClear()) {
 					robot.moveForward();
 					break;
-				} else {
-					for (int i = 0; i < 2; i++) {
-						robot.turnLeft();
-					}
-					if (robot.isPathClear()) {
-						robot.moveForward();
-						break;
-					}
 				}
-
 			}
-
 		}
-
 	}
-
 }
