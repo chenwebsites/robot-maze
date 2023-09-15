@@ -1,6 +1,6 @@
 # Robot-Maze
 
-This problem solved using the approach of "toucging" the left wall at all times.
+This problem solved using the approach of "touching" the left wall at all times.
 There are a few pre-conditions that we guarantee the success of the exit of the robot from the maze: 
 1. I assume the robot begins his walk from the first square at (6,0).
 2. After The robot enter the maze, the entrence becomes a wall.
