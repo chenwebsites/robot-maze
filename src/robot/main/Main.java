@@ -1,12 +1,10 @@
 package robot.main;
 
-import java.util.Iterator;
-
 public class Main {
 
 	public static void main(String[] args) {
 		Robot robot = new Robot();
-		int[] sequence = { 1, 3, 2 };
+		int[] sequence = { 1, 3, 3, 3};
 
 		while (!robot.hasExited()) {
 
